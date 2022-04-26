@@ -1,7 +1,7 @@
 var mysql = require('mysql'); 
 
 var connection = mysql.createConnection({
-host: 'localhost',
+host: '192.168.254.104',
 user: 'root',
 password: '',
 database: 'seccam_db',
