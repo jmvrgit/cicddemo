@@ -2,10 +2,13 @@
 FROM mysql
 
 # define root password
-ENV MYSQL_ROOT_PASSWORD <PASSWORD HERE>
+ENV MYSQL_ROOT_PASSWORD testDBpassword
+
+# define database name
+ENV MYSQL_DATABASE seccam_db
 
 #insert sql from database export
-ADD seccam_db.sql /docker-entrypoint-initdb.d
+COPY ./seccam_db.sql /docker-entrypoint-initdb.d
 
 #open port connection
 EXPOSE 3306
