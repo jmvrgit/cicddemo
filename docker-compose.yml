@@ -1,0 +1,10 @@
+services:
+  database:
+    ports: 
+      - "9002:3306"
+    image: seccamdb:1.0
+  backend:
+    image: seccambackend:1.1
+    ports:
+      - "9001:9001"
+    restart: "on-failure"
