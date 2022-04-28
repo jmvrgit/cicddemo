@@ -11,7 +11,7 @@ metadata:
     kubernetes.io/psp: eks.privileged
     kubesphere.io/restartedAt: '2022-04-28T03:30:56.426Z'
 spec:
-   serviceAccount: jenkins
+  serviceAccount: jenkins
   volumes:
     - name: kube-api-access-tdxjs
       projected:
