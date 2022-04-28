@@ -59,7 +59,7 @@ pipeline {
         //         #!/bin/bash
         //         echo "HELLO"
         //         '''
+                // }
         // }
-    }
 }
 }
