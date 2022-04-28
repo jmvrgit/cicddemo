@@ -13,8 +13,6 @@ WORKDIR /usr/src/seccambackend
 COPY package*.json ./
 
 #install the required dependencies
-RUN npm config rm proxy
-RUN npm config rm https-proxy
 RUN npm install
 
 #copy the backend source code 
