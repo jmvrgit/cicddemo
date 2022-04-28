@@ -52,7 +52,7 @@ pipeline {
             steps{
                 sh script: '''
                 #!/bin/bash
-                cat ./kubernetes/deployments/deployment.yaml | sed s/1.0.0/${BUILD_NUMBER}/g | ./kubectl apply -f -
+                cat seccam-backend.yaml | sed s/1.0.0/${BUILD_NUMBER}/g | ./kubectl apply -f -
                 '''
         }
     }
