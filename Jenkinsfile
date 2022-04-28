@@ -45,20 +45,21 @@ pipeline {
             steps{
                 sh(script: """
                     docker push rjonmarco/seccambackend:${BUILD_NUMBER}
+                    docker push rjonmarco/seccambackend:latest
                 """)
             }
         }
 
-        stage('deploy') {
-            steps{
-                sh script: '''
-                #!/bin/bash
-                // curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-                // chmod +x ./kubectl
-                // cat seccam-backend.yaml | sed s/1.0.0/${BUILD_NUMBER}/g | ./kubectl apply -f -
-                echo "HELLO"
-                '''
-        }
+        // stage('deploy') {
+        //     steps{
+        //         // curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+        //         // chmod +x ./kubectl
+        //         // cat seccam-backend.yaml | sed s/1.0.0/${BUILD_NUMBER}/g | ./kubectl apply -f -
+        //         sh script: '''
+        //         #!/bin/bash
+        //         echo "HELLO"
+        //         '''
+        // }
     }
 }
 }
