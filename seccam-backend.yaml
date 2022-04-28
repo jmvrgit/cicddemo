@@ -48,8 +48,6 @@ spec:
   restartPolicy: Always
   terminationGracePeriodSeconds: 30
   dnsPolicy: ClusterFirst
-  serviceAccountName: default
-  serviceAccount: default
   nodeName: ip-172-31-10-30.ap-east-1.compute.internal
   securityContext: {}
   schedulerName: default-scheduler
