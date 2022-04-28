@@ -51,7 +51,8 @@ pipeline {
         stage('deploy') {
             steps{
                 sh script: '''
-                    echo "Hello!"
+                #!/bin/bash
+                cat ./kubernetes/deployments/deployment.yaml | sed s/1.0.0/${BUILD_NUMBER}/g | ./kubectl apply -f -
                 '''
         }
     }
